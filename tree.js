@@ -2,6 +2,7 @@ import Node from './node.js';
 
 export default class Tree {
   constructor(array) {
+    console.log(array);
     this.root = this.buildTree(array);
   }
 
@@ -237,7 +238,7 @@ export default class Tree {
     this.root = this.buildTree(array);
   }
 
-  prettyPrint(node, prefix = '', isLeft = true) {
+  prettyPrint(node = this.root, prefix = '', isLeft = true) {
     if (node === null) {
       return;
     }
